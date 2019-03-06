@@ -1,0 +1,21 @@
+@font-face {
+    font-family: burger;
+    src: url(/assets/fonts/gomarice_big_burger.ttf);
+}
+body {
+    background-image: url(/assets/images/burgerbg.jpg);
+}
+.container {
+    font-family: burger;
+}
+
+.col-6 {
+    background-color: rgb(138, 0, 0);
+    color: rgb(255, 208, 208);
+    padding-left: 5%;
+    border: white 3px solid;
+}
+
+hr {
+    background-color:rgb(255, 208, 208);
+}

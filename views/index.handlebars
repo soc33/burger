@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row m-5 flex">
+        <div class="col-2">
+            <img src="/assets/images/burger.png" class="img-fluid">
+        </div>
+        <div class="col-10">
+            <h1 class="display-4 text-center align-items-center">EAT BURGERS NOM NOM NOM</h1>
+        </div>
+    </div>
+    <div class="row flex">
+        <div class="col-6">
+            <h2 class="display-6">Burgers ready to eat!</h2><hr>
+            
+                {{#each burgers}}
+                {{#unless devoured}}
+                <p>
+                    {{id}}. {{burger_name}}
+                    <button class="devour-it" data-id="{{id}}">EAT ME</button> <br><br>
+                </p>
+                {{/unless}}
+                {{/each}}
+           
+        </div>
+        <div class="col-6">
+            <h2 class="display-6">Burgers that have already been eaten ya glutton..</h2><hr>
+            <p>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{id}}. {{burger_name}}<br><br>
+                {{/if}}
+                {{/each}}
+            </p>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <h2 class="display-6">
+            Add a burger to EAT!
+        </h2>
+    </div>
+    <div class="row">
+        <form class="create-form">
+            <div class="form-group">
+                <label for="burg">Burger Type: </label><br>
+                <textarea class="form-control" rows="3" type="text" id="burg" name="name"
+                    placeholder="Avocado Burger!"></textarea>
+            </div>
+            <button type="submit">ADD BURGER</button>
+        </form>
+    </div>
+</div>
